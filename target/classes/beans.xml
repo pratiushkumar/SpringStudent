@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a bean -->
+<!--    <bean id="helloBean" class="com.example.HelloService">-->
+<!--        <property name="hello" value="Hello from Spring XML!" />-->
+<!--    </bean>-->
+
+    <!-- Define another bean -->
+    <bean id="math" class="com.example.Course">
+        <constructor-arg value="Mathematics"/>
+    </bean>
+    <bean id="teacher" class="com.example.Teacher"/>
+</beans>
