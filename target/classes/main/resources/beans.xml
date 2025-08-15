@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define a bean -->
-<!--    <bean id="helloBean" class="com.example.HelloService">-->
-<!--        <property name="hello" value="Hello from Spring XML!" />-->
+    <!-- Enable annotation processing -->
+<!--    <context:annotation-config/>-->
+
+<!--    <bean id ="Hello"  class="com.example.HelloService">-->
+<!--        <property name="hello"  value = "this is hello bu patty developer "></property>-->
 <!--    </bean>-->
 
-    <!-- Define another bean -->
-    <bean id="math" class="com.example.Course">
-        <constructor-arg value="Mathematics"/>
+    <bean id="mapping"  class = "com.example.MapStore">
+         <constructor-arg>
+             <map>
+                  <entry key="first" value = "we have first"> </entry>
+             </map>
+         </constructor-arg>
+        <property name="bolling" >
+        <map >
+            <entry key ="120" value = "using Field this is it "/>
+        </map>
+    </property>
     </bean>
-    <bean id="teacher" class="com.example.Teacher"/>
+
+
+<!--    <bean id="hello" class="com.example.Hello">-->
+<!--        <property name="message" value="Hello World"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; Define Course bean &ndash;&gt;-->
+<!--    <bean id="Maths" class="com.example.Course">-->
+<!--        <constructor-arg value="Mathematics"/>-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; Define Teacher bean &ndash;&gt;-->
+<!--    <bean id="teacher" class="com.example.Teacher"/>-->
 </beans>
